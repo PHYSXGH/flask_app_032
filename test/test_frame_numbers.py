@@ -1,13 +1,14 @@
 import json
+import os
 
 from frame_number_extractor import app
 
 
 def test_extract_frame_filenames__success():
     # load sample input and output
-    input_file = open('sample_files/input.json', 'r')
+    input_file = open(os.getcwd() + '/sample_files/input.json', 'r')
     raw_sample_input = input_file.read()
-    output_file = open('sample_files/output.json', 'r')
+    output_file = open(os.getcwd() + '/sample_files/output.json', 'r')
     raw_sample_output = output_file.read()
     sample_output = json.loads(raw_sample_output)
 
@@ -28,8 +29,8 @@ def test_extract_frame_filenames__incorrect_request_type():
 
 
 def test_extract_frame_filenames__incorrect_input_format():
-    # load sample input and output
-    input_file = open('sample_files/input.json', 'r')
+    # load sample input
+    input_file = open(os.getcwd() + '/sample_files/input.json', 'r')
     raw_sample_input = input_file.read()
 
     # initialize test client and send request
@@ -40,8 +41,8 @@ def test_extract_frame_filenames__incorrect_input_format():
 
 
 def test_extract_frame_filenames__incorrect_field_contents():
-    # load sample input and output
-    input_file = open('sample_files/input.json', 'r')
+    # load sample input
+    input_file = open(os.getcwd() + '/sample_files/input.json', 'r')
     raw_sample_input = input_file.read()
     sample_input = json.loads(raw_sample_input)
 
