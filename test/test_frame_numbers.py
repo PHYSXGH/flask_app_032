@@ -1,5 +1,4 @@
 import json
-import os
 import pathlib
 
 from frame_number_extractor import app
