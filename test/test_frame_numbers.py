@@ -44,9 +44,6 @@ def test_extract_frame_filenames__incorrect_field_contents():
     input_file = open('sample_files/input.json', 'r')
     raw_sample_input = input_file.read()
     sample_input = json.loads(raw_sample_input)
-    output_file = open('sample_files/output.json', 'r')
-    raw_sample_output = output_file.read()
-    sample_output = json.loads(raw_sample_output)
 
     # modify the contents of the input file, making it different from the expected format
     sample_input['Filename'] = 123
