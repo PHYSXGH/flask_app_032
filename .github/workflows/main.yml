@@ -38,4 +38,3 @@ jobs:
         pytest
     - name: Build container image
       uses: ./ # Uses an action in the root directory
-      timeout-minutes: 2
