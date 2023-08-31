@@ -1,9 +1,5 @@
 FROM python:3.10.13-slim-bookworm
 
-ARG GITHUB_TOKEN
-
-RUN echo $GITHUB_TOKEN
-
 ENV APP_HOME /app
 WORKDIR $APP_HOME
 COPY requirements.txt ./
