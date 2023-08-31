@@ -2,12 +2,12 @@ FROM python:3.10.13-slim-bookworm
 
 ENV APP_HOME /app
 WORKDIR $APP_HOME
-COPY requirements.txt ./
+COPY ../../requirements.txt ./
 
 RUN pip install -r requirements.txt
 
-COPY frame_number_extractor ./frame_number_extractor
-COPY setup.py ./
+COPY ../../frame_number_extractor ./frame_number_extractor
+COPY ../../setup.py ./
 
 ENV PORT 80
 EXPOSE $PORT

@@ -1,0 +1,6 @@
+# action.yml
+name: 'Flask App'
+description: 'Build the flask app'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
